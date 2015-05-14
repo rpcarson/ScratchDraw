@@ -13,6 +13,7 @@
 		5B7FAAA81B04D6F00005CB94 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B7FAAA71B04D6F00005CB94 /* Images.xcassets */; };
 		5B7FAAAB1B04D6F00005CB94 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B7FAAA91B04D6F00005CB94 /* LaunchScreen.xib */; };
 		5B7FAAB71B04D6F00005CB94 /* ScratchDrawTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7FAAB61B04D6F00005CB94 /* ScratchDrawTests.swift */; };
+		5B7FAAC11B04D9F30005CB94 /* ScratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7FAAC01B04D9F30005CB94 /* ScratchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		5B7FAAB01B04D6F00005CB94 /* ScratchDrawTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScratchDrawTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B7FAAB51B04D6F00005CB94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B7FAAB61B04D6F00005CB94 /* ScratchDrawTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchDrawTests.swift; sourceTree = "<group>"; };
+		5B7FAAC01B04D9F30005CB94 /* ScratchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScratchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				5B7FAA9D1B04D6F00005CB94 /* ScratchDraw */,
-				5B7FAAB31B04D6F00005CB94 /* ScratchDrawTests */,
 				5B7FAA9C1B04D6F00005CB94 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,11 +78,9 @@
 		5B7FAA9D1B04D6F00005CB94 /* ScratchDraw */ = {
 			isa = PBXGroup;
 			children = (
-				5B7FAAA01B04D6F00005CB94 /* AppDelegate.swift */,
 				5B7FAAA21B04D6F00005CB94 /* ViewController.swift */,
+				5B7FAAC01B04D9F30005CB94 /* ScratchView.swift */,
 				5B7FAAA41B04D6F00005CB94 /* Main.storyboard */,
-				5B7FAAA71B04D6F00005CB94 /* Images.xcassets */,
-				5B7FAAA91B04D6F00005CB94 /* LaunchScreen.xib */,
 				5B7FAA9E1B04D6F00005CB94 /* Supporting Files */,
 			);
 			path = ScratchDraw;
@@ -90,6 +89,10 @@
 		5B7FAA9E1B04D6F00005CB94 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5B7FAAA71B04D6F00005CB94 /* Images.xcassets */,
+				5B7FAAA01B04D6F00005CB94 /* AppDelegate.swift */,
+				5B7FAAA91B04D6F00005CB94 /* LaunchScreen.xib */,
+				5B7FAAB31B04D6F00005CB94 /* ScratchDrawTests */,
 				5B7FAA9F1B04D6F00005CB94 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -102,7 +105,7 @@
 				5B7FAAB41B04D6F00005CB94 /* Supporting Files */,
 			);
 			path = ScratchDrawTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		5B7FAAB41B04D6F00005CB94 /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -214,6 +217,7 @@
 			files = (
 				5B7FAAA31B04D6F00005CB94 /* ViewController.swift in Sources */,
 				5B7FAAA11B04D6F00005CB94 /* AppDelegate.swift in Sources */,
+				5B7FAAC11B04D9F30005CB94 /* ScratchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

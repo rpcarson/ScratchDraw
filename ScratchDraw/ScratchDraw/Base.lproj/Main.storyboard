@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C2055" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScratchDraw" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,83 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oAi-vA-fT7" customClass="ScratchView" customModule="ScratchDraw" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRS-cD-Kst">
+                                        <rect key="frame" x="8" y="27" width="138" height="32"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
+                                        <state key="normal" title="Erase That Crap">
+                                            <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clearLines:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7lh-g2-1fr"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBG-BT-w95">
+                                        <rect key="frame" x="0.0" y="520" width="584" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZ7-QT-0gQ">
+                                                <rect key="frame" x="8" y="10" width="60" height="60"/>
+                                                <color key="backgroundColor" red="0.2392199934" green="0.71764999630000004" blue="0.14117999370000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ac-F2-pRR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpC-2m-p5Z">
+                                                <rect key="frame" x="76" y="10" width="60" height="60"/>
+                                                <color key="backgroundColor" red="0.71764999630000004" green="0.24329763861570705" blue="0.43620427949516188" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ap6-NC-Whv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWE-UD-5xQ">
+                                                <rect key="frame" x="144" y="10" width="60" height="60"/>
+                                                <color key="backgroundColor" red="0.99242424242424243" green="0.64450933416718126" blue="0.28928011876052068" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g9W-on-Bia"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="fUV-7N-gr1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="IBG-BT-w95" secondAttribute="bottom" id="bVL-wh-Ogy"/>
+                                    <constraint firstItem="IBG-BT-w95" firstAttribute="leading" secondItem="oAi-vA-fT7" secondAttribute="leading" id="jFh-7L-KS2"/>
+                                    <constraint firstAttribute="trailing" secondItem="IBG-BT-w95" secondAttribute="trailing" id="lvj-P7-5De"/>
+                                    <constraint firstAttribute="trailing" secondItem="IBG-BT-w95" secondAttribute="trailing" id="yfT-dv-tQl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oAi-vA-fT7" secondAttribute="bottom" id="a41-kc-FOM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oAi-vA-fT7" secondAttribute="trailing" id="p2x-Ry-rmD"/>
+                            <constraint firstItem="oAi-vA-fT7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="r6o-Pz-n2k"/>
+                            <constraint firstItem="oAi-vA-fT7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="vSR-2N-evs"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="clearVisual" destination="hRS-cD-Kst" id="yI3-DI-5EY"/>
+                        <outlet property="scratchPad" destination="oAi-vA-fT7" id="ASq-9Z-HNN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
