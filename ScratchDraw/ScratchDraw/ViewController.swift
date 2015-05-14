@@ -17,10 +17,16 @@ class ViewController: UIViewController {
         scratchPad.currentColor = color
         
         }
+    }
+    
+    @IBAction func changeStroke(sender: UIButton) {
+        
         
     }
     
     
+    
+    @IBOutlet weak var strokeVisual: UIButton!
     
     @IBOutlet weak var clearVisual: UIButton!
     
@@ -46,6 +52,7 @@ class ViewController: UIViewController {
 //        scratchPad.backgroundColor = UIColor.redColor()
         clearVisual.layer.cornerRadius = 10
         clearVisual.alpha = 0.5
+        strokeVisual.layer.cornerRadius = 10
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
