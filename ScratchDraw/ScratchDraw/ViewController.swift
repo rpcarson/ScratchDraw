@@ -11,6 +11,41 @@ import UIKit
 class ViewController: UIViewController {
     
     
+    @IBAction func strokeSize(sender: UISlider) {
+   
+        let width = sender.value 
+        
+        scratchPad.lineSize = Double(width)
+        scratchPad.setNeedsDisplay()
+        }
+    
+    @IBAction func changeFill(sender: UIButton) {
+   
+    
+       if let fColor = sender.backgroundColor {
+            
+            scratchPad.fillColor = fColor
+        }
+    
+    
+    }
+    
+
+    
+    
+    @IBAction func Undo(sender: UIButton) {
+        
+        if scratchPad.scratches.count > 0 {
+        
+        var removedLine = scratchPad.scratches.removeLast()
+            
+            scratchPad.setNeedsDisplay()
+            
+        }
+        
+    }
+    
+    
     @IBAction func changeColor(sender: UIButton) {
         
         if let color = sender.backgroundColor {
@@ -19,14 +54,11 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func changeStroke(sender: UIButton) {
-        
-        
-    }
+   
     
     
     
-    @IBOutlet weak var strokeVisual: UIButton!
+   
     
     @IBOutlet weak var clearVisual: UIButton!
     
@@ -52,7 +84,7 @@ class ViewController: UIViewController {
 //        scratchPad.backgroundColor = UIColor.redColor()
         clearVisual.layer.cornerRadius = 10
         clearVisual.alpha = 0.5
-        strokeVisual.layer.cornerRadius = 10
+
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {

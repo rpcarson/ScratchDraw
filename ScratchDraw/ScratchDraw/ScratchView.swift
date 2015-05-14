@@ -10,25 +10,37 @@ import UIKit
 
 class ScratchView: UIView {
     
+    var lineSize = 5.0
     var currentColor = UIColor.blackColor()
-    
+    var fillColor = UIColor.redColor()
     var scratches: [Scratch] = []
     
     override func drawRect(rect: CGRect) {
         
         var context = UIGraphicsGetCurrentContext()
         
-        
-        
-        CGContextSetLineWidth(context, 5.0)
-        
+        CGContextSetLineWidth(context, CGFloat(lineSize))
         CGContextSetLineCap(context, kCGLineCapRound)
         
         UIColor.blackColor().set()
         
         for scratch  in scratches {
-            
+
             if let firsPoint = scratch.points.first {
+                
+                if let fillColor = scratch.fillColor {
+                    
+                    fillColor.set()
+                    
+                    CGContextMoveToPoint(context, firsPoint.x, firsPoint.y)
+                    for point in scratch.points {
+                        
+                    CGContextAddLineToPoint(context, point.x, point.y)
+                        }
+                    
+                    CGContextFillPath(context)
+                    
+                        }
                 
                 if let strokeColor = scratch.strokeColor {
                     
@@ -36,17 +48,13 @@ class ScratchView: UIView {
                     
                     CGContextMoveToPoint(context, firsPoint.x, firsPoint.y)
                     for point in scratch.points {
+                        
                     CGContextAddLineToPoint(context, point.x, point.y)
-                }
-                
-                
+                        }
                     
+                    CGContextStrokePath(context)
                     
                 }
-                
-                CGContextStrokePath(context)
-                
-                
                 
             }
         }
@@ -54,11 +62,12 @@ class ScratchView: UIView {
     
     func newScratchWithStartPoint(point: CGPoint) {
         
-        
         var scratch = Scratch()
-        scratch.points = [point,point]
         
+        scratch.points = [point,point]
         scratch.strokeColor = currentColor
+        scratch.fillColor = fillColor
+        
         scratches.append(scratch)
         setNeedsDisplay()
         
@@ -82,10 +91,7 @@ class ScratchView: UIView {
             setNeedsDisplay()
         }
     }
-    
-    
-
-    }
+}
 
 class Scratch {
     
