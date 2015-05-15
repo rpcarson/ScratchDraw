@@ -8,6 +8,8 @@
 
 import UIKit
 
+var switchOpen = true
+
 var fillColors: [UIColor] = [
     UIColor.cyanColor(),
     UIColor.magentaColor(),
@@ -18,9 +20,37 @@ var fillColors: [UIColor] = [
     UIColor.blueColor()
 ]
 
-
+var publicStrokeAlpha: CGFloat = 1.0
+var publicStrokeSize = 5
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    
+    
+    @IBAction func alphaStrokeSwitch(sender: UISwitch) {
+      let  switchOn = sender.state.rawValue == 0
+       let  switchOff = sender.state.rawValue == 1
+        switchOpen = switchOff
+        
+    }
+    
+    
+    
+    @IBAction func strokeAlpha(sender: UISlider) {
+    
+        let alpha = sender.value
+        publicStrokeAlpha = CGFloat(alpha)
+        scratchPad.setNeedsDisplay()
+    
+    
+    }
+    
+    @IBAction func changeStroke(sender: UISlider) {
+        let stroke = sender.value
+        publicStrokeSize = Int(stroke)
+        
+        
+        
+    }
     
     @IBOutlet weak var viewBottomConstraints: NSLayoutConstraint!
     
@@ -34,12 +64,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 //        }
 //    }
     
-    @IBAction func changeStroke(sender: UIButton) {
-        
-        
-    }
-
-    @IBOutlet weak var strokeVisual: UIButton!
+    
     
     @IBOutlet weak var clearVisual: UIButton!
     

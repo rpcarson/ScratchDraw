@@ -10,6 +10,8 @@ import UIKit
 
 class ScratchView: UIView {
     
+
+    
     var currentColor = UIColor.blackColor()
     
     var scratches: [Scratch] = []
@@ -19,6 +21,7 @@ class ScratchView: UIView {
         var context = UIGraphicsGetCurrentContext()
         
         
+
         
         CGContextSetLineWidth(context, 5.0)
         
@@ -37,13 +40,17 @@ class ScratchView: UIView {
                     CGContextMoveToPoint(context, firsPoint.x, firsPoint.y)
                     for point in scratch.points {
                     CGContextAddLineToPoint(context, point.x, point.y)
+                        
+                    CGContextSetAlpha(context, scratch.strokeAlpha)
+                    CGContextSetLineWidth(context, CGFloat(scratch.strokeSize))
+                        
                 }
                 
                 
                     
                     
                 }
-                
+
                 CGContextStrokePath(context)
                 
                 
@@ -59,6 +66,8 @@ class ScratchView: UIView {
         scratch.points = [point,point]
         
         scratch.strokeColor = currentColor
+        scratch.strokeSize = publicStrokeSize
+        scratch.strokeAlpha = publicStrokeAlpha
         scratches.append(scratch)
         setNeedsDisplay()
         
@@ -92,7 +101,8 @@ class Scratch {
     var points: [CGPoint] = []
     var fillColor: UIColor?
     var strokeColor: UIColor?
-    var strokeSize: Double = 0
+    var strokeSize = 0
+    var strokeAlpha: CGFloat = 1.0
     
     //        line dash
     //         (CGContextSetLine...

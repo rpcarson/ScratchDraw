@@ -23,7 +23,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBG-BT-w95">
                                         <rect key="frame" x="0.0" y="300" width="600" height="300"/>
                                         <subviews>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qNj-A1-H0B">
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qNj-A1-H0B">
                                                 <rect key="frame" x="0.0" y="220" width="600" height="80"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -72,7 +72,11 @@
                                             <constraint firstItem="7mC-sl-eiP" firstAttribute="leading" secondItem="IBG-BT-w95" secondAttribute="leading" id="A4C-A1-akx"/>
                                             <constraint firstItem="7mC-sl-eiP" firstAttribute="top" secondItem="IBG-BT-w95" secondAttribute="top" id="CwH-oM-I0Q"/>
                                             <constraint firstItem="7mC-sl-eiP" firstAttribute="leading" secondItem="IBG-BT-w95" secondAttribute="leadingMargin" constant="8" id="JK7-zx-35k"/>
+                                            <constraint firstItem="qNj-A1-H0B" firstAttribute="leading" secondItem="IBG-BT-w95" secondAttribute="leading" id="Rtu-sn-XtS"/>
+                                            <constraint firstAttribute="trailing" secondItem="qNj-A1-H0B" secondAttribute="trailing" id="VKO-EC-LS1"/>
+                                            <constraint firstItem="qNj-A1-H0B" firstAttribute="top" secondItem="7mC-sl-eiP" secondAttribute="bottom" constant="170" id="aLX-MH-2I6"/>
                                             <constraint firstAttribute="centerX" secondItem="7mC-sl-eiP" secondAttribute="centerX" id="djb-82-OC7"/>
+                                            <constraint firstAttribute="bottom" secondItem="qNj-A1-H0B" secondAttribute="bottom" id="kcg-tu-1St"/>
                                             <constraint firstItem="7mC-sl-eiP" firstAttribute="top" secondItem="IBG-BT-w95" secondAttribute="top" id="pMZ-6u-kcp"/>
                                             <constraint firstItem="7mC-sl-eiP" firstAttribute="leading" secondItem="IBG-BT-w95" secondAttribute="leading" id="q8d-NJ-Vb0"/>
                                         </constraints>
@@ -103,6 +107,24 @@
                                             <action selector="collapse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xSp-lY-LkV"/>
                                         </connections>
                                     </button>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jPV-r0-hVX">
+                                        <rect key="frame" x="205" y="120" width="118" height="31"/>
+                                        <connections>
+                                            <action selector="strokeAlpha:" destination="BYZ-38-t0r" eventType="valueChanged" id="972-Sp-23W"/>
+                                        </connections>
+                                    </slider>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OW1-du-VZb">
+                                        <rect key="frame" x="240" y="42" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="alphaStrokeSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="INX-KM-51c"/>
+                                        </connections>
+                                    </switch>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="dhM-cu-wDV">
+                                        <rect key="frame" x="71" y="36" width="118" height="31"/>
+                                        <connections>
+                                            <action selector="changeStroke:" destination="BYZ-38-t0r" eventType="valueChanged" id="RH0-x0-GbK"/>
+                                        </connections>
+                                    </slider>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
