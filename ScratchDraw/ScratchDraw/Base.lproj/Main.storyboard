@@ -107,22 +107,16 @@
                                             <action selector="collapse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xSp-lY-LkV"/>
                                         </connections>
                                     </button>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jPV-r0-hVX">
-                                        <rect key="frame" x="205" y="120" width="118" height="31"/>
-                                        <connections>
-                                            <action selector="strokeAlpha:" destination="BYZ-38-t0r" eventType="valueChanged" id="972-Sp-23W"/>
-                                        </connections>
-                                    </slider>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OW1-du-VZb">
                                         <rect key="frame" x="240" y="42" width="51" height="31"/>
                                         <connections>
                                             <action selector="alphaStrokeSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="INX-KM-51c"/>
                                         </connections>
                                     </switch>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="dhM-cu-wDV">
-                                        <rect key="frame" x="71" y="36" width="118" height="31"/>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jPV-r0-hVX">
+                                        <rect key="frame" x="31" y="174" width="185" height="39"/>
                                         <connections>
-                                            <action selector="changeStroke:" destination="BYZ-38-t0r" eventType="valueChanged" id="RH0-x0-GbK"/>
+                                            <action selector="strokeAlpha:" destination="BYZ-38-t0r" eventType="valueChanged" id="972-Sp-23W"/>
                                         </connections>
                                     </slider>
                                 </subviews>

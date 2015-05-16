@@ -8,8 +8,6 @@
 
 import UIKit
 
-var switchOpen = true
-
 var fillColors: [UIColor] = [
     UIColor.cyanColor(),
     UIColor.magentaColor(),
@@ -22,47 +20,79 @@ var fillColors: [UIColor] = [
 
 var publicStrokeAlpha: CGFloat = 1.0
 var publicStrokeSize = 5
+
+var switchOpen: Bool = true
+
+
+
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    
+    var thumbColor = UIColor.blackColor()
     
     @IBAction func alphaStrokeSwitch(sender: UISwitch) {
-      let  switchOn = sender.state.rawValue == 0
-       let  switchOff = sender.state.rawValue == 1
-        switchOpen = switchOff
         
+        let  switchButton = sender.on
+        switchOpen = switchButton
+        if sender.on {
+            thumbColor = UIColor.blueColor()
+        }else{
+            thumbColor = UIColor.redColor()
+        }
+        
+
     }
     
-    
-    
+//    var currentValue1 = Float(1)
+//    var currentValue2 = Float(1)
+//    
     @IBAction func strokeAlpha(sender: UISlider) {
-    
-        let alpha = sender.value
-        publicStrokeAlpha = CGFloat(alpha)
-        scratchPad.setNeedsDisplay()
-    
-    
+        
+        if switchOpen == true {
+            
+            
+            sender.minimumValue = 0
+            sender.maximumValue = 1
+            
+            let alpha = sender.value
+            publicStrokeAlpha = CGFloat(alpha)
+            scratchPad.setNeedsDisplay()
+//            sender.value = currentValue1
+//            sender.thumbTintColor = UIColor.blueColor()
+            sender.thumbTintColor = thumbColor
+            
+            
+        }
+        
+        else
+            
+        {
+            
+            sender.minimumValue = 1
+            sender.maximumValue = 10
+            let stroke = sender.value + 1
+            publicStrokeSize = Int(stroke)
+            scratchPad.setNeedsDisplay()
+//            sender.value = currentValue2
+//          sender.thumbTintColor = UIColor.redColor()
+            sender.thumbTintColor = thumbColor
+            
+            
+        }
     }
     
-    @IBAction func changeStroke(sender: UISlider) {
-        let stroke = sender.value
-        publicStrokeSize = Int(stroke)
-        
-        
-        
-    }
+
     
     @IBOutlet weak var viewBottomConstraints: NSLayoutConstraint!
     
     @IBOutlet weak var fillColorCollectionView: UICollectionView!
-
-//    @IBAction func changeColor(sender: UIButton) {
-//        
-//        if let color = sender.backgroundColor {
-//            scratchPad.currentColor = color
-//            
-//        }
-//    }
+    
+    //    @IBAction func changeColor(sender: UIButton) {
+    //
+    //        if let color = sender.backgroundColor {
+    //            scratchPad.currentColor = color
+    //
+    //        }
+    //    }
     
     
     
@@ -103,7 +133,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("colorCell", forIndexPath: indexPath) as! ColorCell
         
-       cell.backgroundColor = fillColors[indexPath.item]
+        cell.backgroundColor = fillColors[indexPath.item]
         
         return cell
         
@@ -114,7 +144,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let cell = collectionView.cellForItemAtIndexPath(indexPath) as! ColorCell
         
         if let color = cell.backgroundColor {
-           
+            
             scratchPad.currentColor = color
             
         }
@@ -156,10 +186,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         UIView.animateWithDuration(0.4, animations: { () -> Void in
         })
         
-    
-    
+        
+        
     }
     
-    
-}
+    }
 
