@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B5765E21B07FAAF0071B54A /* FillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5765E11B07FAAF0071B54A /* FillCell.swift */; };
 		5B643E8F1B062AA000D7848E /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B643E8E1B062AA000D7848E /* ColorCell.swift */; };
 		5B7FAAA11B04D6F00005CB94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7FAAA01B04D6F00005CB94 /* AppDelegate.swift */; };
 		5B7FAAA31B04D6F00005CB94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7FAAA21B04D6F00005CB94 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B5765E11B07FAAF0071B54A /* FillCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillCell.swift; sourceTree = "<group>"; };
 		5B643E8E1B062AA000D7848E /* ColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		5B7FAA9B1B04D6F00005CB94 /* ScratchDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScratchDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B7FAA9F1B04D6F00005CB94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				5B7FAAC01B04D9F30005CB94 /* ScratchView.swift */,
 				5B7FAAA41B04D6F00005CB94 /* Main.storyboard */,
 				5B643E8E1B062AA000D7848E /* ColorCell.swift */,
+				5B5765E11B07FAAF0071B54A /* FillCell.swift */,
 				5B7FAA9E1B04D6F00005CB94 /* Supporting Files */,
 			);
 			path = ScratchDraw;
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B5765E21B07FAAF0071B54A /* FillCell.swift in Sources */,
 				5B7FAAA31B04D6F00005CB94 /* ViewController.swift in Sources */,
 				5B643E8F1B062AA000D7848E /* ColorCell.swift in Sources */,
 				5B7FAAA11B04D6F00005CB94 /* AppDelegate.swift in Sources */,

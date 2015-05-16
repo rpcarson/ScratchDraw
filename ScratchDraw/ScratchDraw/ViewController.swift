@@ -8,6 +8,18 @@
 
 import UIKit
 
+var realFillColors: [UIColor] = [
+    UIColor.redColor(),
+    UIColor.blueColor(),
+    UIColor.greenColor(),
+
+    
+]
+
+
+
+
+
 var fillColors: [UIColor] = [
     UIColor.cyanColor(),
     UIColor.magentaColor(),
@@ -35,30 +47,35 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         switchOpen = switchButton
         if sender.on {
             thumbColor = UIColor.blueColor()
+            currentValue = 0.5
+            
         }else{
             thumbColor = UIColor.redColor()
+           currentValue = 5
         }
         
 
     }
     
-//    var currentValue1 = Float(1)
-//    var currentValue2 = Float(1)
-//    
+    var currentValue = Float(1)
+
+//
     @IBAction func strokeAlpha(sender: UISlider) {
+        
+       sender.thumbTintColor = thumbColor
+        
         
         if switchOpen == true {
             
-            
+//            sender.state = currentValue
+
             sender.minimumValue = 0
             sender.maximumValue = 1
-            
+
             let alpha = sender.value
             publicStrokeAlpha = CGFloat(alpha)
             scratchPad.setNeedsDisplay()
-//            sender.value = currentValue1
-//            sender.thumbTintColor = UIColor.blueColor()
-            sender.thumbTintColor = thumbColor
+
             
             
         }
@@ -67,20 +84,22 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             
         {
             
+            
+//            sender.value = currentValue
+
             sender.minimumValue = 1
             sender.maximumValue = 10
             let stroke = sender.value + 1
             publicStrokeSize = Int(stroke)
             scratchPad.setNeedsDisplay()
-//            sender.value = currentValue2
-//          sender.thumbTintColor = UIColor.redColor()
-            sender.thumbTintColor = thumbColor
+
             
             
         }
     }
     
 
+    @IBOutlet weak var realFillCollectionView: UICollectionView!
     
     @IBOutlet weak var viewBottomConstraints: NSLayoutConstraint!
     
@@ -105,11 +124,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
     }
     
-    
-    
-    
-    
-    
+
     @IBOutlet weak var scratchPad: ScratchView!
     
     override func viewDidLoad() {
@@ -117,11 +132,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         fillColorCollectionView.dataSource = self
         fillColorCollectionView.delegate = self
-        
+       
+//        realFillCollectionView.dataSource = self
+//        realFillCollectionView.delegate = self
+       
         viewBottomConstraints.constant = -300
         
     }
     
+ 
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
