@@ -41,6 +41,19 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     var thumbColor = UIColor.blackColor()
     
+   
+    @IBAction func clearFill(sender: UIButton) {
+    
+        if let color = sender.backgroundColor {
+            scratchPad.fillColorz = color
+        
+        }
+    
+    
+    }
+    
+    
+    
     @IBAction func alphaStrokeSwitch(sender: UISwitch) {
         
         let  switchButton = sender.on
