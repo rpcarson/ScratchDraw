@@ -10,9 +10,13 @@ import UIKit
 
 class ScratchView: UIView {
     
-
     
-    var fillEnable = true
+    
+    
+    
+    
+    //
+    //    var fillEnable = fillOn
     
     var fillColorz = UIColor.redColor()
     
@@ -28,12 +32,25 @@ class ScratchView: UIView {
         CGContextSetLineCap(context, kCGLineCapRound)
         UIColor.blackColor().set()
         
-       
+        
         for scratch  in scratches {
             
+            func fillSwitch()   {
+                
+                                    
+                                    if fillOn == true   {
+                    
+                    
+                    CGContextFillPath(context)
+                    println("enabled")
+                
+                
+                }
+            }
             CGContextSetAlpha(context, scratch.strokeAlpha)
             
-           
+            fillSwitch()
+            
             if let firsPoint = scratch.points.first {
                 
                 
@@ -44,17 +61,17 @@ class ScratchView: UIView {
                     CGContextMoveToPoint(context, firsPoint.x, firsPoint.y)
                     
                     for point in scratch.points {
-                    
-                        CGContextAddLineToPoint(context, point.x, point.y)
-                    
-                    
-                        CGContextSetLineWidth(context, CGFloat(scratch.strokeSize))
-                       
-                       
                         
+                        CGContextAddLineToPoint(context, point.x, point.y)
+                        
+                        
+                        CGContextSetLineWidth(context, CGFloat(scratch.strokeSize))
+                        
+                        
+                        
+                    }
+                    
                 }
-        
-        }
                 if let strokeColor = scratch.strokeColor {
                     
                     strokeColor.set()
@@ -69,13 +86,21 @@ class ScratchView: UIView {
                     
                 }
                 
-             
-               
+                //                func fillSwitch(){
+                //                    if fillOn == true{
+                //
+                //
+                //                    CGContextFillPath(context)
+                //                        println("enabled")}
+                //
+                //
+                //                }
+                
+                
+                fillSwitch()
+                //                CGContextFillPath(context)
+                
                 CGContextStrokePath(context)
-                 CGContextFillPath(context)
-                
-                
-                
                 
                 
             }
@@ -117,8 +142,8 @@ class ScratchView: UIView {
     }
     
     
-
-    }
+    
+}
 
 class Scratch {
     
@@ -132,33 +157,33 @@ class Scratch {
     //         (CGContextSetLine...
     //        line cap
     //        line join
-
-
-
-
-
-var frustration = Int()
+    
+    
+    
+    
+    
+    var frustration = Int()
     
     
     func coding() {
-    
-    
-    if frustration > 7 {
-    
-    flipTable()
-    
+        
+        
+        if frustration > 7 {
+            
+            flipTable()
+            
+        }
+        
     }
     
-    }
-   
     func flipTable() {
         
         println("arggghhhh")
     }
-
-
-
-
-
+    
+    
+    
+    
+    
 }
 

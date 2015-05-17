@@ -8,17 +8,14 @@
 
 import UIKit
 
+
+
 var realFillColors: [UIColor] = [
     UIColor.redColor(),
     UIColor.blueColor(),
     UIColor.greenColor(),
 
-    
 ]
-
-
-
-
 
 var fillColors: [UIColor] = [
     UIColor.cyanColor(),
@@ -35,9 +32,39 @@ var publicStrokeSize = 5
 
 var switchOpen: Bool = true
 
-
+var fillOn = false
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+
+    
+//    var fillOn = true
+    
+    @IBAction func fillerSwitch(sender: UISwitch) {
+        
+       var fillSwitchEngage = sender.on
+        if fillSwitchEngage == sender.on{
+            
+            fillOn == true
+            println("debug view cont")
+        }
+        
+        
+        println("debug")
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     var thumbColor = UIColor.blackColor()
     
