@@ -30,22 +30,27 @@ class ScratchView: UIView {
             
             if let firsPoint = scratch.points.first {
                 
-                if let strokeColor = scratch.strokeColor {
+              
+                switch scratch.type {
                     
-                    strokeColor.set()
+                case .Ellipse:
                     
-                    CGContextMoveToPoint(context, firsPoint.x, firsPoint.y)
-                    for point in scratch.points {
-                    CGContextAddLineToPoint(context, point.x, point.y)
+                        scratch.drawEllipseWithContext(context)
+                    
+                case .Line:
+                    
+                    scratch.drawLineWithContext(context)
+               
+                case .Rect:
+                  
+                    scratch.drawRectWithContext(context)
+                    
+                case .Triangle:
+                   
+                    scratch.drawTriangleWithContext(context)
+                    
                 }
-                
-                
-                    
-                    
-                }
-                
-                CGContextStrokePath(context)
-                
+                                
                 
                 
             }
@@ -58,7 +63,9 @@ class ScratchView: UIView {
         var scratch = Scratch()
         scratch.points = [point,point]
         
-        scratch.strokeColor = currentColor
+        scratch.type = .Triangle
+        
+        scratch.fillColor = currentColor
         scratches.append(scratch)
         setNeedsDisplay()
         
@@ -87,6 +94,16 @@ class ScratchView: UIView {
 
     }
 
+
+
+enum ScratchType {
+    
+    case Line
+    case Rect
+    case Ellipse
+    case Triangle
+}
+
 class Scratch {
     
     var points: [CGPoint] = []
@@ -94,9 +111,91 @@ class Scratch {
     var strokeColor: UIColor?
     var strokeSize: Double = 0
     
+    
+    var type: ScratchType = .Line
+    
+    
+    func drawLineWithContext(context: CGContextRef) {
+        
+        if let fillColor = fillColor {
+            
+            fillColor.set()
+            
+            CGContextMoveToPoint(context, points[0].x, points[0].y)
+            
+            for point in points {
+                CGContextAddLineToPoint(context, point.x, point.y)
+            }
+            
+            CGContextFillPath(context)
+            
+        }
+        
+    }
+    
+    func drawEllipseWithContext(context: CGContextRef) {
+        
+        
+        if let fillColor = fillColor {
+            
+            fillColor.set()
+            
+            let x = points[0].x
+            let y = points[0].y
+            
+            let width = points[1].x - points[0].x
+            let height = points[1].y - points[0].y
+            
+            let rect = CGRectMake(x, y, width, height)
+            CGContextFillEllipseInRect(context, rect)
+        }
+    
+    }
+    
+    func drawRectWithContext(context: CGContextRef) {
+        
+        
+        if let fillColor = fillColor {
+            
+            fillColor.set()
+            
+            let x = points[0].x
+            let y = points[0].y
+            
+            let width = points[1].x - points[0].x
+            let height = points[1].y - points[0].y
+            
+            let rect = CGRectMake(x, y, width, height)
+            CGContextFillRect(context, rect)
+        }
+        
+    }
+    
     //        line dash
     //         (CGContextSetLine...
     //        line cap
+
+    
+    func drawTriangleWithContext(context: CGContextRef) {
+        
+        if let fillColor = fillColor {
+            
+            fillColor.set()
+            
+            CGContextMoveToPoint(context, points[1].x, points[1].y)
+            CGContextAddLineToPoint(context, points[0].x, points[1].y)
+            
+           var midX = (points[0].x + points[1].x) / 2
+            
+            CGContextAddLineToPoint(context, midX, points[0].y)
+            CGContextAddLineToPoint(context, points[1].x, points[1].y)
+            CGContextFillPath(context)
+            
+            
+            
+        }
+    }
+    
     //        line join
 }
 
