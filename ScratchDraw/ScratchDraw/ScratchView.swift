@@ -28,7 +28,7 @@ class ScratchView: UIView {
         
         for scratch  in scratches {
             
-            if let firsPoint = scratch.points.first {
+            if let firstPoint = scratch.points.first {
                 
               
                 switch scratch.type {
@@ -63,7 +63,7 @@ class ScratchView: UIView {
         var scratch = Scratch()
         scratch.points = [point,point]
         
-        scratch.type = .Triangle
+        scratch.type = .Ellipse
         
         scratch.fillColor = currentColor
         scratches.append(scratch)

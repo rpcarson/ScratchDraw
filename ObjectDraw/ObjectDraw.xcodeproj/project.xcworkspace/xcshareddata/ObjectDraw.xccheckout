@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3ECDEE2A-B9B7-44EB-950D-4B9C994D0C0F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>84A816E414F464BF0363CA806F8066C79DF0BF9F</key>
+		<string>https://github.com/rpcarson/ScratchDraw.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ObjectDraw/ObjectDraw.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>84A816E414F464BF0363CA806F8066C79DF0BF9F</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rpcarson/ScratchDraw.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>84A816E414F464BF0363CA806F8066C79DF0BF9F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>84A816E414F464BF0363CA806F8066C79DF0BF9F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ScratchDraw</string>
+		</dict>
+	</array>
+</dict>
+</plist>
