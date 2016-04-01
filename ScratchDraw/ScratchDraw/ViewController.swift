@@ -8,14 +8,6 @@
 
 import UIKit
 
-var fillColors: [UIColor] = [
-UIColor.cyanColor(),
-    UIColor.magentaColor(),
-    UIColor.yellowColor(),
-    UIColor.blackColor()
-]
-
-
 
 class ViewController: UIViewController {
     
@@ -23,74 +15,80 @@ class ViewController: UIViewController {
     @IBAction func changeColor(sender: UIButton) {
         
         if let color = sender.backgroundColor {
-        scratchPad.currentColor = color
-        
+            scratchPad.currentColor = color
+            
         }
     }
     
-    @IBAction func changeStroke(sender: UIButton) {
-        
-        
     
+    @IBAction func ChangeShape(sender: UIButton) {
+        
+        if let text = sender.titleLabel?.text {
+            switch text {
+            case "Line": scratchPad.currentShapeType = ScratchType.Line
+            case "Triangle": scratchPad.currentShapeType = ScratchType.Triangle
+            case "Rectangle": scratchPad.currentShapeType = ScratchType.Rect
+            case "Ellipse": scratchPad.currentShapeType = ScratchType.Ellipse
+            default: print("invalid shape type")
+            }
+        }
+        
+        
+        
     }
-    
-    
     
     @IBOutlet weak var strokeVisual: UIButton!
-    
     @IBOutlet weak var clearVisual: UIButton!
-    
     @IBAction func clearLines(sender: AnyObject) {
-   
-    scratchPad.scratches = []
-        scratchPad.setNeedsDisplay()    
-    
+        scratchPad.scratches = []
+        scratchPad.setNeedsDisplay()
+        
     }
     
-    
-    
-    
-    
-    
+
     @IBOutlet weak var scratchPad: ScratchView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        view.addSubview(scratchPad)
-//        scratchPad.frame = view.frame
-//        scratchPad.backgroundColor = UIColor.redColor()
         clearVisual.layer.cornerRadius = 10
         clearVisual.alpha = 0.5
         strokeVisual.layer.cornerRadius = 10
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
-        if let touch = touches.first as? UITouch {
+        if let touch = touches.first as UITouch? {
             
             let location = touch.locationInView(scratchPad)
             
             scratchPad.newScratchWithStartPoint(location)
-            
+                        
         }
         
     }
     
     
-    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
-        if let touch = touches.first as? UITouch {
+        if let touch = touches.first as UITouch? {
             
             let location = touch.locationInView(scratchPad)
-            scratchPad.updateCurrentScratchWithLastPoint(location)
-//            scratchPad.addPointToCurrentScratch(location)
+            
+            if scratchPad.currentShapeType == ScratchType.Line {
+                scratchPad.addPointToCurrentScratch(location)
+                
+            } else {
+                scratchPad.updateCurrentScratchWithLastPoint(location)
+                
+            }
             
         }
         
     }
     
-
+    
     
 }
 

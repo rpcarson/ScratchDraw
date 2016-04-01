@@ -14,6 +14,7 @@
 		5B7FAAAB1B04D6F00005CB94 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B7FAAA91B04D6F00005CB94 /* LaunchScreen.xib */; };
 		5B7FAAB71B04D6F00005CB94 /* ScratchDrawTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7FAAB61B04D6F00005CB94 /* ScratchDrawTests.swift */; };
 		5B7FAAC11B04D9F30005CB94 /* ScratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7FAAC01B04D9F30005CB94 /* ScratchView.swift */; };
+		5BCB36A81CAB022900E744DB /* Scratch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCB36A71CAB022900E744DB /* Scratch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		5B7FAAB51B04D6F00005CB94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B7FAAB61B04D6F00005CB94 /* ScratchDrawTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchDrawTests.swift; sourceTree = "<group>"; };
 		5B7FAAC01B04D9F30005CB94 /* ScratchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScratchView.swift; sourceTree = "<group>"; };
+		5BCB36A71CAB022900E744DB /* Scratch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scratch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			children = (
 				5B7FAAA21B04D6F00005CB94 /* ViewController.swift */,
 				5B7FAAC01B04D9F30005CB94 /* ScratchView.swift */,
+				5BCB36A71CAB022900E744DB /* Scratch.swift */,
 				5B7FAAA41B04D6F00005CB94 /* Main.storyboard */,
 				5B7FAA9E1B04D6F00005CB94 /* Supporting Files */,
 			);
@@ -159,11 +162,14 @@
 		5B7FAA931B04D6F00005CB94 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Reed Carson";
 				TargetAttributes = {
 					5B7FAA9A1B04D6F00005CB94 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 4Q7583X6S7;
 					};
 					5B7FAAAF1B04D6F00005CB94 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -215,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BCB36A81CAB022900E744DB /* Scratch.swift in Sources */,
 				5B7FAAA31B04D6F00005CB94 /* ViewController.swift in Sources */,
 				5B7FAAA11B04D6F00005CB94 /* AppDelegate.swift in Sources */,
 				5B7FAAC11B04D9F30005CB94 /* ScratchView.swift in Sources */,
@@ -346,9 +353,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ScratchDraw/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -356,9 +366,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ScratchDraw/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -415,6 +428,7 @@
 				5B7FAABC1B04D6F00005CB94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B7FAABD1B04D6F00005CB94 /* Build configuration list for PBXNativeTarget "ScratchDrawTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +437,7 @@
 				5B7FAABF1B04D6F00005CB94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
