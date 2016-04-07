@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B4277AD1CB4436D00442968 /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4277AC1CB4436D00442968 /* OptionsView.swift */; };
+		5B4277AF1CB4489700442968 /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4277AE1CB4489700442968 /* Slider.swift */; };
 		5B7FAAA11B04D6F00005CB94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7FAAA01B04D6F00005CB94 /* AppDelegate.swift */; };
 		5B7FAAA31B04D6F00005CB94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7FAAA21B04D6F00005CB94 /* ViewController.swift */; };
 		5B7FAAA61B04D6F00005CB94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B7FAAA41B04D6F00005CB94 /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		5B7FAAAB1B04D6F00005CB94 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B7FAAA91B04D6F00005CB94 /* LaunchScreen.xib */; };
 		5B7FAAB71B04D6F00005CB94 /* ScratchDrawTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7FAAB61B04D6F00005CB94 /* ScratchDrawTests.swift */; };
 		5B7FAAC11B04D9F30005CB94 /* ScratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7FAAC01B04D9F30005CB94 /* ScratchView.swift */; };
+		5BA4FF7D1CB050310027B504 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA4FF7C1CB050310027B504 /* RoundButton.swift */; };
 		5BCB36A81CAB022900E744DB /* Scratch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCB36A71CAB022900E744DB /* Scratch.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B4277AC1CB4436D00442968 /* OptionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
+		5B4277AE1CB4489700442968 /* Slider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
 		5B7FAA9B1B04D6F00005CB94 /* ScratchDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScratchDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B7FAA9F1B04D6F00005CB94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B7FAAA01B04D6F00005CB94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +44,7 @@
 		5B7FAAB51B04D6F00005CB94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B7FAAB61B04D6F00005CB94 /* ScratchDrawTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchDrawTests.swift; sourceTree = "<group>"; };
 		5B7FAAC01B04D9F30005CB94 /* ScratchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScratchView.swift; sourceTree = "<group>"; };
+		5BA4FF7C1CB050310027B504 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		5BCB36A71CAB022900E744DB /* Scratch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scratch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +90,9 @@
 				5B7FAAC01B04D9F30005CB94 /* ScratchView.swift */,
 				5BCB36A71CAB022900E744DB /* Scratch.swift */,
 				5B7FAAA41B04D6F00005CB94 /* Main.storyboard */,
+				5B4277AE1CB4489700442968 /* Slider.swift */,
+				5B4277AC1CB4436D00442968 /* OptionsView.swift */,
+				5BA4FF7C1CB050310027B504 /* RoundButton.swift */,
 				5B7FAA9E1B04D6F00005CB94 /* Supporting Files */,
 			);
 			path = ScratchDraw;
@@ -222,9 +231,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BCB36A81CAB022900E744DB /* Scratch.swift in Sources */,
+				5BA4FF7D1CB050310027B504 /* RoundButton.swift in Sources */,
 				5B7FAAA31B04D6F00005CB94 /* ViewController.swift in Sources */,
+				5B4277AD1CB4436D00442968 /* OptionsView.swift in Sources */,
 				5B7FAAA11B04D6F00005CB94 /* AppDelegate.swift in Sources */,
 				5B7FAAC11B04D9F30005CB94 /* ScratchView.swift in Sources */,
+				5B4277AF1CB4489700442968 /* Slider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

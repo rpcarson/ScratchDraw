@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,6 +20,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oAi-vA-fT7" customClass="ScratchView" customModule="ScratchDraw" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wcw-L8-q9h" customClass="Slider" customModule="ScratchDraw" customModuleProvider="target">
+                                        <rect key="frame" x="6" y="63" width="118" height="31"/>
+                                        <connections>
+                                            <action selector="adjustAlpha:" destination="BYZ-38-t0r" eventType="valueChanged" id="6cr-hm-jzT"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hXE-uu-fdx" customClass="Slider" customModule="ScratchDraw" customModuleProvider="target">
+                                        <rect key="frame" x="128" y="63" width="118" height="31"/>
+                                        <connections>
+                                            <action selector="adjustStroke:" destination="BYZ-38-t0r" eventType="valueChanged" id="Zqp-DR-hZR"/>
+                                        </connections>
+                                    </slider>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBG-BT-w95">
                                         <rect key="frame" x="0.0" y="520" width="600" height="80"/>
                                         <subviews>
@@ -83,7 +95,7 @@
                                                     <action selector="changeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g9W-on-Bia"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wx-h5-Tju">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wx-h5-Tju">
                                                 <rect key="frame" x="122" y="42" width="30" height="30"/>
                                                 <color key="backgroundColor" red="0.50196081399917603" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal">
@@ -114,30 +126,7 @@
                                                     <action selector="ChangeShape:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UJe-u6-7wa"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRS-cD-Kst">
-                                                <rect key="frame" x="165" y="42" width="50" height="30"/>
-                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
-                                                <state key="normal" title="Clear">
-                                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="clearLines:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7lh-g2-1fr"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyZ-ha-cpO">
-                                                <rect key="frame" x="222" y="5" width="52" height="36"/>
-                                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
-                                                <state key="normal" title="Triangle">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="ChangeShape:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vrj-Xg-Pen"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diW-3e-JVM">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diW-3e-JVM">
                                                 <rect key="frame" x="273" y="5" width="67" height="36"/>
                                                 <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
@@ -159,11 +148,64 @@
                                                     <action selector="ChangeShape:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ch-rG-BFO"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKC-a9-rud">
+                                                <rect key="frame" x="224" y="37" width="50" height="40"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
+                                                <state key="normal" title="Undo">
+                                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="undoButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CLH-8g-Lvj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRS-cD-Kst">
+                                                <rect key="frame" x="282" y="42" width="50" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
+                                                <state key="normal" title="Clear">
+                                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clearLines:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7lh-g2-1fr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyZ-ha-cpO">
+                                                <rect key="frame" x="222" y="5" width="52" height="36"/>
+                                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="15"/>
+                                                <state key="normal" title="Triangle">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="ChangeShape:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vrj-Xg-Pen"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="hRS-cD-Kst" firstAttribute="centerX" secondItem="IBG-BT-w95" secondAttribute="centerX" constant="7" id="07I-cM-cJ6"/>
+                                            <constraint firstItem="gKC-a9-rud" firstAttribute="centerY" secondItem="IBG-BT-w95" secondAttribute="centerY" constant="17" id="2YP-mp-Ob5"/>
                                             <constraint firstAttribute="height" constant="80" id="8cN-1l-GLP"/>
+                                            <constraint firstAttribute="bottom" secondItem="hRS-cD-Kst" secondAttribute="bottom" constant="8" id="8sM-8G-VRQ"/>
+                                            <constraint firstItem="gKC-a9-rud" firstAttribute="leading" secondItem="hRS-cD-Kst" secondAttribute="trailing" constant="9" id="EJa-85-me0"/>
+                                            <constraint firstItem="hRS-cD-Kst" firstAttribute="centerY" secondItem="IBG-BT-w95" secondAttribute="centerY" constant="17" id="HOi-AZ-1kN"/>
+                                            <constraint firstItem="hRS-cD-Kst" firstAttribute="top" secondItem="diW-3e-JVM" secondAttribute="bottom" constant="1" id="gPG-dR-Qtu"/>
+                                            <constraint firstItem="gKC-a9-rud" firstAttribute="centerX" secondItem="IBG-BT-w95" secondAttribute="centerX" constant="-51" id="iQI-n6-6md"/>
+                                            <constraint firstItem="hRS-cD-Kst" firstAttribute="leading" secondItem="gKC-a9-rud" secondAttribute="trailing" constant="8" id="ugX-IC-Q4Z"/>
+                                            <constraint firstItem="hRS-cD-Kst" firstAttribute="leading" secondItem="1wx-h5-Tju" secondAttribute="trailing" constant="13" id="wrC-kn-eHv"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="EJa-85-me0"/>
+                                                <exclude reference="8sM-8G-VRQ"/>
+                                                <exclude reference="gPG-dR-Qtu"/>
+                                                <exclude reference="ugX-IC-Q4Z"/>
+                                                <exclude reference="wrC-kn-eHv"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -183,13 +225,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="clearVisual" destination="hRS-cD-Kst" id="yI3-DI-5EY"/>
+                        <outlet property="AlphaSlider" destination="wcw-L8-q9h" id="QXT-5P-xRV"/>
+                        <outlet property="StrokeSlider" destination="hXE-uu-fdx" id="eI6-yi-cB4"/>
                         <outlet property="scratchPad" destination="oAi-vA-fT7" id="ASq-9Z-HNN"/>
-                        <outlet property="strokeVisual" destination="nIo-6D-pYx" id="wLw-7G-6ql"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="362" y="325"/>
         </scene>
     </scenes>
 </document>

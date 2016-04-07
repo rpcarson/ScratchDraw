@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B1A6E3150AC9F605845EC31722F5A29A25B869C2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "84A816E414F464BF0363CA806F8066C79DF0BF9F" : 0,
+    "B1A6E3150AC9F605845EC31722F5A29A25B869C2" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "62CE8437-A4AB-44BB-AEDD-665E5F250B0D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "84A816E414F464BF0363CA806F8066C79DF0BF9F" : "",
+    "B1A6E3150AC9F605845EC31722F5A29A25B869C2" : "ScratchDraw\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ScratchDraw",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ScratchDraw.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rpcarson\/ScratchDraw.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "84A816E414F464BF0363CA806F8066C79DF0BF9F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rpcarson\/SimplePaint.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B1A6E3150AC9F605845EC31722F5A29A25B869C2"
+    }
+  ]
+}
